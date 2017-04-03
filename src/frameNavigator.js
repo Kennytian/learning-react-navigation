@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-const MainScreenNavigator = TabNavigator({
+const FrameNavigator = TabNavigator({
   Home: {
     screen: Home,
     navigationOptions: {
@@ -68,4 +68,4 @@ const MainScreenNavigator = TabNavigator({
   },
 });
 
-export default MainScreenNavigator;
+export default FrameNavigator;

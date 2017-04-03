@@ -6,19 +6,7 @@ import {
   View,
 } from 'react-native';
 
-const styles =  {
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
-} ;
+import styles from './styles';
 
 export default class ProductList extends Component {
   static navigationOptions = {

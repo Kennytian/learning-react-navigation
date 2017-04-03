@@ -6,19 +6,7 @@ import {
   View,
 } from 'react-native';
 
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
-};
+import styles from './styles';
 
 export default class ProductDetail extends Component {
   static navigationOptions = {
@@ -35,7 +23,8 @@ export default class ProductDetail extends Component {
   };
 
   render() {
-    const {state, goBack} = this.props.navigation;
+    const {navigate, state, goBack} = this.props.navigation;
+    const {productId, amount} = state.params;
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -47,8 +36,13 @@ export default class ProductDetail extends Component {
           </Text>
         </TouchableOpacity>
         <Text style={styles.welcome}>
-          产品信息：ID:{state.params.productId} 总计：{state.params.amount}
+          产品信息：ID:{productId} 总计：{amount}
         </Text>
+        <TouchableOpacity onPress={() => navigate('paymentChooser')}>
+          <Text style={styles.welcome}>
+            进入支付选择页
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }

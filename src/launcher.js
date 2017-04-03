@@ -10,6 +10,7 @@ import { StackNavigator } from 'react-navigation'
 import FrameNavigator from './frameNavigator';
 import ProductList from './productList';
 import ProductDetail from './productDetail';
+import paymentChooser from './paymentChooser';
 
 const App = StackNavigator({
   Main: {
@@ -23,10 +24,17 @@ const App = StackNavigator({
       }
     }
   },
+  paymentChooser: {
+    screen: paymentChooser,
+    navigationOptions: {
+      // header: {
+      //   title: '支付选择', // 默认后退标题文字
+      // }
+    }
+  },
   ProductList: {
     screen: ProductList,
-    navigationOptions: {
-    }
+    navigationOptions: {}
   },
   ProductDetail: {
     screen: ProductDetail,
