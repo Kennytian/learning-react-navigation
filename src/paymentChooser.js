@@ -17,6 +17,7 @@ const paymentChooser = TabNavigator({
     showIcon: false,
     showLabel: true,
     activeTintColor: '#e91e63',
+    inactiveTintColor: 'lightgray',
     animationEnabled: true,
     swipeEnabled: false,
     lazyLoad: true,
